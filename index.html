@@ -14,23 +14,27 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
     <link rel="stylesheet" href="./assets/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
     <title>Project 1</title>
   </head>
   <body>
-    <div class="jumbotron">
-      <h1>Start of the Project</h1>
-    </div>
+    <video autoplay muted loop id="myVideo">
+      <source src="./vid/sr animated.mp4" type="video/mp4">
+    </video>
+    <!-- <div class="jumbotron">
+      <img src="https://camo.githubusercontent.com/1a4b11888ddf9f2b7a9353d6b69503e634e8704c/68747470733a2f2f692e696d6775722e636f6d2f415975745a4f462e706e67">
+    </div> -->
     <div class="background">
       <div class="container">
         <div class="row">
-          <div class="col-sm-6">
-            <h1>Pokedex</h1>
+          <div class="col-xs-8">
+            <img src="https://camo.githubusercontent.com/1a4b11888ddf9f2b7a9353d6b69503e634e8704c/68747470733a2f2f692e696d6775722e636f6d2f415975745a4f462e706e67">
+            <br>  
             <form id="pokemon-form">
-              <label for="pokemon-input">Search for a Pokemon</label>
-              <input type="text" id="pokemon-input" /><br />
-
+              <label for="pokemon-input">Enter Pokémon name & press pokéball to see results:</label>
+              <input type="text" id="pokemon-input" /><br>
               <!-- This button will trigger our AJAX call -->
-              <input id="find-pokemon" type="submit" value="Pokemon Search" />
+              <input src="https://cdn.iconscout.com/icon/free/png-256/pokemon-pokeball-game-go-34722.png" id="find-pokemon" type="image" alt="Pokemon Search" class="justify-content-center"/>
             </form>
           </div>
         </div>
@@ -41,5 +45,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
   </body>
 </html>
