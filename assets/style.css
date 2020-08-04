@@ -1,0 +1,20 @@
+/* body, ::after {
+    background-image: url(../../pokecard.jpg);
+    opacity: 0.5;
+}
+.card-body{
+    background-color: khaki;
+    color: black
+} */
+
+
+body{
+    background-image: url(../../pokemongomap.png);
+    background-size: auto;
+}
+.container{
+    background-color: khaki;
+    border-color: blue;
+    border: 5px;
+    color: black;
+}
