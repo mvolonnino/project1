@@ -1,20 +1,31 @@
-/* body, ::after {
-    background-image: url(../../pokecard.jpg);
-    opacity: 0.5;
+#myVideo{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
-.card-body{
-    background-color: khaki;
-    color: black
-} */
-
-
-body{
-    background-image: url(../../pokemongomap.png);
-    background-size: auto;
+.row{
+  justify-content: center;
+  align-content: center;
 }
-.container{
-    background-color: khaki;
-    border-color: blue;
-    border: 5px;
-    color: black;
+img{
+  max-width: 500px;
+  max-height: 100%;
+  display: block;
+}
+#find-pokemon {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+.card-body {
+  position: relative;
+  background-image: repeating-linear-gradient(#FDFD96, #FFCC33);
+  color: black;
+}
+.close {
+  position: absolute;
+  right: 0.625rem;
+  top: -17.5rem;
 }
