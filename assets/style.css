@@ -9,6 +9,7 @@
 .row{
   justify-content: center;
   align-content: center;
+
 }
 img{
   max-width: 500px;
@@ -31,6 +32,7 @@ p {
 }
 .close {
   position: absolute;
+
   left: 0.625rem;
   top: -17.5rem;
 }
