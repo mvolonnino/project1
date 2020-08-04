@@ -1,4 +1,4 @@
-#myVideo {
+#myVideo{
   position: fixed;
   right: 0;
   bottom: 0;
@@ -15,8 +15,8 @@ img{
   display: block;
 }
 #find-pokemon {
-  height: 80px;
-  width: 80px;
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
 }
 .card-body {
@@ -27,5 +27,5 @@ img{
 .close {
   position: absolute;
   right: 0.625rem;
-  bottom: 0.5rem;
+  top: -17.5rem;
 }
