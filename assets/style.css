@@ -1,5 +1,5 @@
 p {
-  font-size: 1rem;
+  font-size: 0.8125rem;
 }
 body {
   background-image: url(../img/pokemonbg.png);
@@ -14,8 +14,8 @@ body {
 
 .close {
   position: absolute;
-  right: 0.625rem;
-  bottom: 0.5rem;
+  left: 0.625rem;
+  top: -17.5rem;
 }
 /* .background {
   background-image: url(../img/pokemonbg.png);
