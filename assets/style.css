@@ -1,44 +1,46 @@
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
 
-.hero-section {
-    border-bottom: 20px;
-    background: url("https://user-images.githubusercontent.com/33485290/43087793-f370302a-8ea0-11e8-8dcb-e35b1b33c9a2.png") 50% no-repeat;
-    background-size: cover;
-    height: 50vh;
-    text-align: center;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
+p {
+  font-size: 1.15rem;
+}
+
+
   
+
+img{
+  max-width: 500px;
+  
+}
+
+body { 
  
-  .hero-section .hero-section-text {
-    color: #fefefe;
-    text-shadow: 1px 1px 2px #0a0a0a;
-    margin-top: 300px;
-    margin-right: 40px;
-    
-    
-  }
-  
-  
-.input-group-rounded .input-group-field {
-    border-radius: 5000px 0 0 5000px;
-    padding-left: 1rem;
-    
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+.card-body {
+  position: relative;
+  background-image: repeating-linear-gradient(#fdfd96, #ffcc33);
+  color: black;
+}
 
-   
-  }
-  
-  .input-group-rounded .input-group-button .button {
-    border-radius: 0 5000px 5000px 0;
-    font-size: 0.8rem;
-  }
-  
-  
-  
+.close {
+  position: absolute;
+  right: 0.625rem;
+  bottom: 0.5rem;
+}
+/* .background {
+  background-image: url(../img/pokemonbg.png);
+  background-position: center;
+  height: 100vh;
+  opacity: 50%;
+} */
+

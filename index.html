@@ -13,35 +13,37 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/style.css"/>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
     <title>Project 1</title>
   </head>
   <body>
-    <div class="container">
-      <div class="hero-section">
-        <div class="hero-section-text">
-          <p style="font-size: xx-large; border-top: 20px; color: black;">Pokedex</p>
-          <div class="input-group input-group-rounded">
-            <input class="input-group-field " type="search">
-            <div class="input-group-button">
-              <input type="submit" class="button secondary" value="Pokemon Search">
-            </div>
+    <video autoplay muted loop id="myVideo">
+      <source src="./vid/sr animated.mp4" type="video/mp4">
+    </video>
+    <div class="jumbotron">
+      <img src="https://camo.githubusercontent.com/1a4b11888ddf9f2b7a9353d6b69503e634e8704c/68747470733a2f2f692e696d6775722e636f6d2f415975745a4f462e706e67" alt="">
+    </div>
+    <div class="background">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <img src="https://camo.githubusercontent.com/1a4b11888ddf9f2b7a9353d6b69503e634e8704c/68747470733a2f2f692e696d6775722e636f6d2f415975745a4f462e706e67" alt="">
+            <form id="pokemon-form">
+              <label for="pokemon-input">Search for a Pokemon</label>
+              <input type="text" id="pokemon-input" /><br />
+
+              <!-- This button will trigger our AJAX call -->
+              <input id="find-pokemon" type="submit" value="Pokemon Search" />
+            </form>
           </div>
         </div>
+        <div class="row" id="pokemon-view"></div>
       </div>
     </div>
-
-
-    
-      
-
-    </div>
-    
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
   </body>
 </html>
