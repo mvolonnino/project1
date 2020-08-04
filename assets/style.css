@@ -1,12 +1,6 @@
 p {
   font-size: 0.8125rem;
 }
-body {
-  background-image: url(../img/pokemonbg.png);
-  background-position: center;
-  height: 100vh;
-  /* opacity: 50%; */
-}
 
 .card-body {
   position: relative;
@@ -17,9 +11,3 @@ body {
   left: 0.625rem;
   top: -17.5rem;
 }
-/* .background {
-  background-image: url(../img/pokemonbg.png);
-  background-position: center;
-  height: 100vh;
-  opacity: 50%;
-} */
