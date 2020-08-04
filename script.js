@@ -16,7 +16,7 @@ $(document).ready(function () {
       console.log("This is the pokemon: " + name, response);
       // create a row to add pokemon cards too
       var pokemonCol = $("<div>");
-      pokemonCol.addClass("col-sm-3 m-1");
+      pokemonCol.addClass("col-xs-3 m-1");
       // add the row to HTML
       $("#pokemon-view").prepend(pokemonCol);
       // create the whole div to append the different card classes too

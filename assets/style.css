@@ -5,42 +5,27 @@
   min-width: 100%;
   min-height: 100%;
 }
-
-p {
-  font-size: 1rem;
+.row{
+  justify-content: center;
+  align-content: center;
 }
-
-
-  
-
 img{
   max-width: 500px;
-  
+  max-height: 100%;
+  display: block;
 }
-
-body { 
- 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  font-family: 'Barlow Condensed', sans-serif;
+#find-pokemon {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
 }
 .card-body {
   position: relative;
-  background-image: repeating-linear-gradient(#fdfd96, #ffcc33);
+  background-image: repeating-linear-gradient(#FDFD96, #FFCC33);
   color: black;
 }
-
 .close {
   position: absolute;
   right: 0.625rem;
   bottom: 0.5rem;
 }
-/* .background {
-  background-image: url(../img/pokemonbg.png);
-  background-position: center;
-  height: 100vh;
-  opacity: 50%;
-} */
-
