@@ -13,16 +13,33 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
     <title>Project 1</title>
   </head>
   <body>
     <div class="jumbotron">
       <h1>Start of the Project</h1>
     </div>
+    <div class="background">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h1>Pokedex</h1>
+            <form id="pokemon-form">
+              <label for="pokemon-input">Search for a Pokemon</label>
+              <input type="text" id="pokemon-input" /><br />
 
+              <!-- This button will trigger our AJAX call -->
+              <input id="find-pokemon" type="submit" value="Pokemon Search" />
+            </form>
+          </div>
+        </div>
+        <div class="row" id="pokemon-view"></div>
+      </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
