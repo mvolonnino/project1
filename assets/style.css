@@ -1,0 +1,44 @@
+
+.hero-section {
+    border-bottom: 20px;
+    background: url("https://user-images.githubusercontent.com/33485290/43087793-f370302a-8ea0-11e8-8dcb-e35b1b33c9a2.png") 50% no-repeat;
+    background-size: cover;
+    height: 50vh;
+    text-align: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+ 
+  .hero-section .hero-section-text {
+    color: #fefefe;
+    text-shadow: 1px 1px 2px #0a0a0a;
+    margin-top: 300px;
+    margin-right: 40px;
+    
+    
+  }
+  
+  
+.input-group-rounded .input-group-field {
+    border-radius: 5000px 0 0 5000px;
+    padding-left: 1rem;
+    
+
+   
+  }
+  
+  .input-group-rounded .input-group-button .button {
+    border-radius: 0 5000px 5000px 0;
+    font-size: 0.8rem;
+  }
+  
+  
+  
