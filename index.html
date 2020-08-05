@@ -13,11 +13,18 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="assets/style.css"/>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+      integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I="
+      crossorigin="anonymous"
+    />
     <title>Project 1</title>
   </head>
   <body>
     <video autoplay muted loop id="myVideo">
+
       <source src="./vid/sr animated.mp4" type="video/mp4">
       </video>
       <div class="background">
@@ -32,16 +39,31 @@
               </form>
             </div>
           </div>
-          <div class="row" id="pokemon-view"></div>
-          <div class="row" id="youtube-vids">
-            <iframe class="youtube-player youtube-vids" type="text/html" width="640" height="385"></iframe>
-          </div>
-        </div>
+      <div class="row" id="pokemon-view"></div>
+      <!-- youtube videos go here -->
+      <div class="row">
+        <h2 class="col-md-12 z">Related Youtube Search:</h2>
       </div>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
-      <script src="script.js"></script>
+      <div class="row" id="youtubeVideoRow">
+        
+      </div>
+      <!-- <div class="row" id="youtube-vids">
+        <!-- <iframe
+          class="youtube-player youtube-vids"
+          type="text/html"
+          width="640"
+          height="385"
+        ></iframe> -->
+      </div> -->
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
+      integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o="
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
   </body>
 </html>
