@@ -37,7 +37,7 @@ $(document).ready(function () {
       // create the title where we use the var name to show for each card
       var pokemonBodyTitle = $("<h4>");
       pokemonBodyTitle.addClass("card-title text-center");
-      pokemonBodyTitle.text(name);
+      pokemonBodyTitle.text(response.name);
       pokemonBodyDiv.append(pokemonBodyTitle);
       // create the p tag to hold pokedex index
       var pokedexIndex = $("<p>");
@@ -154,6 +154,7 @@ $(document).ready(function () {
     var youtubeKey = "AIzaSyAAfbghaqhBwtZd5wcSpoCWCfV-UbltQEg";
     var ytQueryURL = "https://www.googleapis.com/youtube/v3/search";
     var youtubeVideos = [];
+    // searching by value that was entered in search field
     youtubeVideos.push(name);
     console.log("this is youtubeVideos: ", youtubeVideos);
 
@@ -186,7 +187,7 @@ $(document).ready(function () {
           $("#youtubeVideoRow").append(youtubeCol);
           // create the iframe to hold the youtube video
           var youtubeIframe = $("<iframe>");
-          youtubeIframe.addClass("youtube-player youtube-vids");
+          youtubeIframe.addClass("youtube-player youtube-vids mb-3");
           youtubeIframe.attr("type", "text/html");
           youtubeIframe.attr("width", "640");
           youtubeIframe.attr("height", "385");
