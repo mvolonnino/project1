@@ -1,4 +1,4 @@
-/* 
+
 #myVideo{
   position: fixed;
   right: 0;
@@ -16,11 +16,30 @@
   max-height: 100%;
   display: block;
 }
+
+
+#pokemon-input{
+  -webkit-font-smoothing: antialiased;
+  margin-top: 0;
+  padding: 5px;
+  padding-left: 26px;
+  float: none;
+  width: 60%;
+  height: 27px;
+  font-size: 15px;
+  line-height: normal;
+  border-color: red;
+  
+  
+}
 #find-pokemon {
   height: 100px;
   width: 100px;
   border-radius: 50%;
+  
+  
 }
+
 p {
   font-size: 0.8125rem;
 
@@ -35,37 +54,5 @@ p {
 
   left: 0.625rem;
   top: -17.5rem;
-} */
-
-#myVideo{
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
-.row{
-  justify-content: center;
-  align-content: center;
-}
-.pokedeximg{
-  max-width: 500px;
-  max-height: 100%;
-  display: block;
 }
 
-#find-pokemon {
-  height: 80px;
-  width: 80px;
-  border-radius: 50%;
-}
-.card-body {
-  position: relative;
-  background-image: repeating-linear-gradient(#FDFD96, #FFCC33);
-  color: black;
-}
-.close {
-  position: absolute;
-  right: 0.625rem;
-  top: -17.5rem;
-}
