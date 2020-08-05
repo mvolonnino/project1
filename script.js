@@ -151,7 +151,7 @@ $(document).ready(function () {
     });
 
     // logic for Youtube API to show a related video on pokemon searched
-    var youtubeKey = "AIzaSyAAfbghaqhBwtZd5wcSpoCWCfV-UbltQEg";
+    var youtubeKey = "AIzaSyAAjv4XhySAJQNWxgqskqqk9bBRj6DEXj4";
     var ytQueryURL = "https://www.googleapis.com/youtube/v3/search";
     var youtubeVideos = [];
     // searching by value that was entered in search field
