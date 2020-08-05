@@ -1,4 +1,3 @@
-
 #myVideo {
   position: fixed;
   right: 0;
@@ -6,18 +5,18 @@
   min-width: 100%;
   min-height: 100%;
 }
-/* .row {
+.row {
   justify-content: center;
   align-content: center;
-} */
+}
+
 .pokedeximg {
   max-width: 500px;
   max-height: 100%;
   display: block;
 }
 
-
-#pokemon-input{
+#pokemon-input {
   -webkit-font-smoothing: antialiased;
   margin-top: 0;
   padding: 5px;
@@ -28,8 +27,6 @@
   font-size: 15px;
   line-height: normal;
   border-color: red;
-  
-  
 }
 
 #find-pokemon {
@@ -53,24 +50,23 @@
   top: -17.5rem;
 }
 
-
 .youtube-vids {
   z-index: 0;
 }
 
-#youtubeVideoRow {
+/* #youtubeVideoRow {
   display: flex;
   justify-content: center;
   align-content: center;
-}
+} */
 
-.pokedeximg{
+.pokedeximg {
   max-width: 500px;
   max-height: 100%;
   display: block;
 }
 
-#pokemon-input{
+#pokemon-input {
   -webkit-font-smoothing: antialiased;
   margin-top: 0;
   padding: 5px;
@@ -86,24 +82,22 @@
   height: 75px;
   width: 75px;
   border-radius: 50%;
-  
 }
 
 .card-body {
   position: relative;
-  background-image: repeating-linear-gradient(#FDFD96, #FFCC33);
+  background-image: repeating-linear-gradient(#fdfd96, #ffcc33);
   color: black;
 }
 .card-text {
   font-size: 0.8125rem;
-
 }
 .close {
   position: absolute;
   right: 0.625rem;
   top: -17.5rem;
 }
-.youtube-vids{
+.youtube-vids {
   z-index: 0;
 }
 
