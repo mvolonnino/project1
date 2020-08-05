@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="Description" content="Enter your description here" />
+    <meta name="description" content="App linking Pokémon API with Youtube API. Search a Pokemon of your choice to see some of their stats and a related video from Youtube.">
+    <meta name="keywords" content="pokemon, pokedex, pokemon card, pokemon video">
+    <meta name="author" content="Oscar Chiriboga, Kyle O'Rourke, Erin Platvoet, Matt Volonnino">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
@@ -13,6 +15,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
+    <title>Pokédex Search</title>
+
     <link rel="stylesheet" href="./assets/style.css" />
     <link
       rel="stylesheet"
@@ -20,7 +24,6 @@
       integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I="
       crossorigin="anonymous"
     />
-    <title>Project 1</title>
   </head>
   <body>
     <video autoplay muted loop id="myVideo">
@@ -31,14 +34,17 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-8">
+              <center>
               <img src="https://camo.githubusercontent.com/1a4b11888ddf9f2b7a9353d6b69503e634e8704c/68747470733a2f2f692e696d6775722e636f6d2f415975745a4f462e706e67" class="pokedeximg"><br><br>
               <form id="pokemon-form">
                 <input type="text" id="pokemon-input" placeholder="Enter a Pokémon name & press pokéball to see their stats">
-                <input src="https://cdn.iconscout.com/icon/free/png-256/pokemon-pokeball-game-go-34722.png" id="find-pokemon" type="image" alt="Pokemon Search" />
+
+                
                 <!-- This button will trigger our AJAX call -->
-              </form>
+                <input src="https://cdn.iconscout.com/icon/free/png-256/pokemon-pokeball-game-go-34722.png" id="find-pokemon" type="image" alt="Pokemon Search" />
+              </form></center>
             </div>
-          </div>
+          </div>  
       <div class="row" id="pokemon-view"></div>
       <!-- youtube videos go here -->
       <div class="row">
@@ -46,6 +52,7 @@
       </div>
       <div class="row" id="youtubeVideoRow">
         
+
       </div>
       <!-- <div class="row" id="youtube-vids">
         <!-- <iframe

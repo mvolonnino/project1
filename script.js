@@ -157,8 +157,6 @@ $(document).ready(function () {
     youtubeVideos.push(name);
     console.log("this is youtubeVideos: ", youtubeVideos);
 
-    // var userSearch = $("#pokemon-input").val().trim();
-    // console.log("this is user search", userSearch)
     $.ajax({
       url: ytQueryURL,
       method: "GET",
