@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="Description" content="Enter your description here" />
+    <meta name="description" content="App linking Pokémon API with Youtube API. Search a Pokemon of your choice to see some of their stats and a related video from Youtube.">
+    <meta name="keywords" content="pokemon, pokedex, pokemon card, pokemon video">
+    <meta name="author" content="Oscar Chiriboga, Kyle O'Rourke, Erin Platvoet, Matt Volonnino">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
@@ -14,7 +16,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
     <link rel="stylesheet" href="assets/style.css"/>
-    <title>Project 1</title>
+    <title>Pokédex Search</title>
   </head>
   <body>
     <video autoplay muted loop id="myVideo">
@@ -24,17 +26,20 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-8">
+              <center>
               <img src="https://camo.githubusercontent.com/1a4b11888ddf9f2b7a9353d6b69503e634e8704c/68747470733a2f2f692e696d6775722e636f6d2f415975745a4f462e706e67" class="pokedeximg"><br><br>
               <form id="pokemon-form">
-                <label for="pokemon-input">Enter a Pokémon name & press pokéball to see their stats:</label><br>
+                <input type="text" id="pokemon-input" placeholder="Enter a Pokémon name & press pokéball to see their stats">
                 
-                <input type="text" id="pokemon-input" /><br />
                 <!-- This button will trigger our AJAX call -->
                 <input src="https://cdn.iconscout.com/icon/free/png-256/pokemon-pokeball-game-go-34722.png" id="find-pokemon" type="image" alt="Pokemon Search" />
-              </form>
+              </form></center>
             </div>
           </div>
           <div class="row" id="pokemon-view"></div>
+          <div class="row" id="youtube-vids">
+            <iframe class="youtube-player youtube-vids" type="text/html" width="640" height="385"></iframe>
+          </div>
         </div>
       </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
