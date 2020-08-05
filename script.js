@@ -190,8 +190,8 @@ $(document).ready(function () {
           var youtubeIframe = $("<iframe>");
           youtubeIframe.addClass("youtube-player youtube-vids");
           youtubeIframe.attr("type", "text/html");
-          youtubeIframe.attr("width", "320");
-          youtubeIframe.attr("height", "192.5");
+          youtubeIframe.attr("width", "640");
+          youtubeIframe.attr("height", "385");
           youtubeIframe.attr(
             "src",
             "http://youtube.com/embed/" + response.items[0].id.videoId
