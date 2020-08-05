@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $("#find-pokemon").on("click", function () {
+  $("#find-pokemon").on("click", function (event) {
     event.preventDefault();
 
     var name = $("#pokemon-input").val().trim().toLowerCase();
@@ -151,8 +151,12 @@ $(document).ready(function () {
     });
 
     // logic for Youtube API to show a related video on pokemon searched
-    var youtubeKey = "AIzaSyCtd97Zes7khZYm2GCHcYAfDT5EgvmWqZk";
+    var youtubeKey = "AIzaSyAAfbghaqhBwtZd5wcSpoCWCfV-UbltQEg";
     var ytQueryURL = "https://www.googleapis.com/youtube/v3/search";
+    var youtubeVideos = [];
+    youtubeVideos.push(name);
+    console.log("this is youtubeVideos: ", youtubeVideos);
+
     // var userSearch = $("#pokemon-input").val().trim();
     // console.log("this is user search", userSearch)
     $.ajax({
@@ -160,7 +164,7 @@ $(document).ready(function () {
       method: "GET",
       data: {
         key: youtubeKey,
-        q: name,
+        q: youtubeVideos[0],
         part: "snippet",
         maxResults: 1,
         type: "video",
@@ -168,17 +172,40 @@ $(document).ready(function () {
         videoSyndiacted: true,
       },
     }).then(function (response) {
+      // clg the related youtube search
       console.log(response);
       $(".youtube-player").attr(
         "src",
         "http://youtube.com/embed/" + response.items[0].id.videoId
       );
+      // create function to render youtube videos based on the youtube videos array that will be emptied after each search so that only the most recent pokemon name will search youtube
+      function renderYoutubeVideos() {
+        $("#youtubeVideoRow").empty();
+        // creating the
+        for (var i = 0; i < youtubeVideos.length; i++) {
+          var youtubeCol = $("<div>");
+          youtubeCol.addClass("col-md-6");
+          $("#youtubeVideoRow").append(youtubeCol);
+          // create the iframe to hold the youtube video
+          var youtubeIframe = $("<iframe>");
+          youtubeIframe.addClass("youtube-player youtube-vids");
+          youtubeIframe.attr("type", "text/html");
+          youtubeIframe.attr("width", "320");
+          youtubeIframe.attr("height", "192.5");
+          youtubeIframe.attr(
+            "src",
+            "http://youtube.com/embed/" + response.items[0].id.videoId
+          );
+          youtubeCol.append(youtubeIframe);
+        }
+      }
+      // call the renderYoutubeVideos to only show the last searched name
+      renderYoutubeVideos();
     });
   });
   // function on click to remove the card when "x" is clicked
   $(document).on("click", "#closer", function () {
     event.preventDefault();
-    console.log("this is what we click: ", this);
     $(this).parent().parent().parent().hide();
   });
 });
