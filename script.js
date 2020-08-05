@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $("#find-pokemon").on("click", function () {
+  $("#find-pokemon").on("click", function (event) {
     event.preventDefault();
 
     var name = $("#pokemon-input").val().trim().toLowerCase();
@@ -15,9 +15,7 @@ $(document).ready(function () {
       console.log("This is the pokemon: " + name, response);
       // create a row to add pokemon cards too
       var pokemonCol = $("<div>");
-
       pokemonCol.addClass("col-xs-3 m-2");
-
       // add the row to HTML
       $("#pokemon-view").prepend(pokemonCol);
       // create the whole div to append the different card classes too
@@ -151,32 +149,61 @@ $(document).ready(function () {
       // Append everything to the row we created that has been added to HTML
       pokemonCol.append(pokemonDiv);
     });
-    var youtubeKey = "AIzaSyCtd97Zes7khZYm2GCHcYAfDT5EgvmWqZk";
+
+    // logic for Youtube API to show a related video on pokemon searched
+    var youtubeKey = "AIzaSyAAfbghaqhBwtZd5wcSpoCWCfV-UbltQEg";
     var ytQueryURL = "https://www.googleapis.com/youtube/v3/search";
-    // var userSearch = $("#pokemon-input").val().trim();
-    // console.log("this is user search", userSearch)
+    var youtubeVideos = [];
+    youtubeVideos.push(name);
+    console.log("this is youtubeVideos: ", youtubeVideos);
+
     $.ajax({
       url: ytQueryURL,
       method: "GET",
       data: {
         key: youtubeKey,
-        q: name,
-        part: 'snippet',
+        q: youtubeVideos[0],
+        part: "snippet",
         maxResults: 1,
-        type: 'video',
+        type: "video",
         videoEmbeddable: true,
-        videoSyndiacted: true
+        videoSyndiacted: true,
       },
     }).then(function (response) {
+      // clg the related youtube search
       console.log(response);
-      $(".youtube-player").attr("src", "http://youtube.com/embed/" + response.items[0].id.videoId);
-      // $(".youtube-player").append
+      $(".youtube-player").attr(
+        "src",
+        "http://youtube.com/embed/" + response.items[0].id.videoId
+      );
+      // create function to render youtube videos based on the youtube videos array that will be emptied after each search so that only the most recent pokemon name will search youtube
+      function renderYoutubeVideos() {
+        $("#youtubeVideoRow").empty();
+        // creating the
+        for (var i = 0; i < youtubeVideos.length; i++) {
+          var youtubeCol = $("<div>");
+          youtubeCol.addClass("col-md-6");
+          $("#youtubeVideoRow").append(youtubeCol);
+          // create the iframe to hold the youtube video
+          var youtubeIframe = $("<iframe>");
+          youtubeIframe.addClass("youtube-player youtube-vids");
+          youtubeIframe.attr("type", "text/html");
+          youtubeIframe.attr("width", "640");
+          youtubeIframe.attr("height", "385");
+          youtubeIframe.attr(
+            "src",
+            "http://youtube.com/embed/" + response.items[0].id.videoId
+          );
+          youtubeCol.append(youtubeIframe);
+        }
+      }
+      // call the renderYoutubeVideos to only show the last searched name
+      renderYoutubeVideos();
     });
   });
   // function on click to remove the card when "x" is clicked
   $(document).on("click", "#closer", function () {
     event.preventDefault();
-    console.log("this is what we click: ", this);
     $(this).parent().parent().parent().hide();
   });
 });
