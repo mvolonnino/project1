@@ -19,8 +19,7 @@
   width: 100px;
   border-radius: 50%;
 }
-
-p {
+.card-text {
   font-size: 0.8125rem;
 }
 .card-body {
@@ -28,7 +27,6 @@ p {
   background-image: repeating-linear-gradient(#fdfd96, #ffcc33);
   color: black;
 }
-
 
 .close {
   position: absolute;

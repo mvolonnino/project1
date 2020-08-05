@@ -32,7 +32,7 @@ $(document).ready(function () {
       // create the card body to hold the contents
       var pokemonBodyDiv = $("<div>");
       pokemonBodyDiv.addClass("card-body");
-      pokemonBodyDiv.attr("style", "height:19rem");
+      pokemonBodyDiv.attr("style", "height:17rem");
       pokemonDiv.append(pokemonBodyDiv);
       // create the title where we use the var name to show for each card
       var pokemonBodyTitle = $("<h4>");
@@ -148,6 +148,31 @@ $(document).ready(function () {
       pokemonBodyDiv.append(clearBTN);
       // Append everything to the row we created that has been added to HTML
       pokemonCol.append(pokemonDiv);
+    });
+
+    // logic for Youtube API to show a related video on pokemon searched
+    var youtubeKey = "AIzaSyCtd97Zes7khZYm2GCHcYAfDT5EgvmWqZk";
+    var ytQueryURL = "https://www.googleapis.com/youtube/v3/search";
+    // var userSearch = $("#pokemon-input").val().trim();
+    // console.log("this is user search", userSearch)
+    $.ajax({
+      url: ytQueryURL,
+      method: "GET",
+      data: {
+        key: youtubeKey,
+        q: name,
+        part: "snippet",
+        maxResults: 1,
+        type: "video",
+        videoEmbeddable: true,
+        videoSyndiacted: true,
+      },
+    }).then(function (response) {
+      console.log(response);
+      $(".youtube-player").attr(
+        "src",
+        "http://youtube.com/embed/" + response.items[0].id.videoId
+      );
     });
   });
   // function on click to remove the card when "x" is clicked
