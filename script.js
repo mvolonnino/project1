@@ -176,7 +176,7 @@ $(document).ready(function () {
       console.log(response);
       $(".youtube-player").attr(
         "src",
-        "http://youtube.com/embed/" + response.items[0].id.videoId
+        "https://youtube.com/embed/" + response.items[0].id.videoId
       );
       // create function to render youtube videos based on the youtube videos array that will be emptied after each search so that only the most recent pokemon name will search youtube
       function renderYoutubeVideos() {
@@ -194,7 +194,7 @@ $(document).ready(function () {
           youtubeIframe.attr("height", "385");
           youtubeIframe.attr(
             "src",
-            "http://youtube.com/embed/" + response.items[0].id.videoId
+            "https://youtube.com/embed/" + response.items[0].id.videoId
           );
           youtubeCol.append(youtubeIframe);
         }

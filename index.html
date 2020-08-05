@@ -24,37 +24,47 @@
   </head>
   <body>
     <video autoplay muted loop id="myVideo">
-
-      <source src="./vid/sr animated.mp4" type="video/mp4">
-      </video>
-      <div class="background">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8">
-              <img src="https://camo.githubusercontent.com/1a4b11888ddf9f2b7a9353d6b69503e634e8704c/68747470733a2f2f692e696d6775722e636f6d2f415975745a4f462e706e67" class="pokedeximg"><br><br>
-              <form id="pokemon-form">
-                <input type="text" id="pokemon-input" placeholder="Enter a Pokémon name & press pokéball to see their stats">
-                <input src="https://cdn.iconscout.com/icon/free/png-256/pokemon-pokeball-game-go-34722.png" id="find-pokemon" type="image" alt="Pokemon Search" />
-                <!-- This button will trigger our AJAX call -->
-              </form>
-            </div>
+      <source src="./vid/sr animated.mp4" type="video/mp4" />
+    </video>
+    <div class="background">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-10">
+            <img
+              src="https://camo.githubusercontent.com/1a4b11888ddf9f2b7a9353d6b69503e634e8704c/68747470733a2f2f692e696d6775722e636f6d2f415975745a4f462e706e67"
+              class="pokedeximg"
+            /><br /><br />
+            <form id="pokemon-form">
+              <input
+                type="text"
+                id="pokemon-input"
+                placeholder="Enter a Pokémon name & press pokéball to search"
+              />
+              <input
+                src="https://cdn.iconscout.com/icon/free/png-256/pokemon-pokeball-game-go-34722.png"
+                id="find-pokemon"
+                type="image"
+                alt="Pokemon Search"
+              />
+              <!-- This button will trigger our AJAX call -->
+            </form>
           </div>
-      <div class="row" id="pokemon-view"></div>
-      <!-- youtube videos go here -->
-      <div class="row">
-        <h2 class="col-md-12 z">Related Youtube Search:</h2>
-      </div>
-      <div class="row" id="youtubeVideoRow">
-        
-      </div>
-      <!-- <div class="row" id="youtube-vids">
+        </div>
+        <div class="row" id="pokemon-view"></div>
+        <!-- youtube videos go here -->
+        <div class="row">
+          <h2 class="col-md-12 z">Related Youtube Search:</h2>
+        </div>
+        <div class="row" id="youtubeVideoRow"></div>
+        <!-- <div class="row" id="youtube-vids">
         <!-- <iframe
           class="youtube-player youtube-vids"
           type="text/html"
           width="640"
           height="385"
         ></iframe> -->
-      </div> -->
+      </div>
+      -->
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
