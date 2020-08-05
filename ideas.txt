@@ -1,0 +1,7 @@
+Have a dynamic background on the cards based on the type of pokemon - so take first type and change card background i.e water = blue, fire = red, grass = green, psychic = purple, normal = grey, flying = light blue, fighter = dark gray, ground and rock = brown etc.
+
+Look into conflicting CSS styles giving us problems on the page - maybe html all in FOUNDATION and JS in BOOTSTRAP. Running issue with loading pokedex with bootstrap having the pokedex lettering and then what looks like FOUNDATION doing the video background. 
+
+Possiblity add link to youtube/google search for the game that the pokemon first appear in.
+
+Get youtube to dynamicaly build div container holding iframe so that it can load a max of 3 videos beneath the cards - maybe limit the number of pokemon cards to 6? and then have the bottom row get replaced by more searches.
