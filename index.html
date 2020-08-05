@@ -24,32 +24,21 @@
   </head>
   <body>
     <video autoplay muted loop id="myVideo">
-      <source src="./vid/sr animated.mp4" type="video/mp4" />
-    </video>
-    <!-- <div class="background"> -->
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8">
-          <img
-            src="https://camo.githubusercontent.com/1a4b11888ddf9f2b7a9353d6b69503e634e8704c/68747470733a2f2f692e696d6775722e636f6d2f415975745a4f462e706e67"
-            class="pokedeximg"
-          />
-          <br />
-          <form id="pokemon-form">
-            <label for="pokemon-input"
-              >Enter Pokémon name & press pokéball to see results:</label
-            >
-            <input type="text" id="pokemon-input" /><br />
-            <!-- This button will trigger our AJAX call -->
-            <input
-              src="https://cdn.iconscout.com/icon/free/png-256/pokemon-pokeball-game-go-34722.png"
-              id="find-pokemon"
-              type="image"
-              alt="Pokemon Search"
-            />
-          </form>
-        </div>
-      </div>
+
+      <source src="./vid/sr animated.mp4" type="video/mp4">
+      </video>
+      <div class="background">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8">
+              <img src="https://camo.githubusercontent.com/1a4b11888ddf9f2b7a9353d6b69503e634e8704c/68747470733a2f2f692e696d6775722e636f6d2f415975745a4f462e706e67" class="pokedeximg"><br><br>
+              <form id="pokemon-form">
+                <input type="text" id="pokemon-input" placeholder="Enter a Pokémon name & press pokéball to see their stats">
+                <input src="https://cdn.iconscout.com/icon/free/png-256/pokemon-pokeball-game-go-34722.png" id="find-pokemon" type="image" alt="Pokemon Search" />
+                <!-- This button will trigger our AJAX call -->
+              </form>
+            </div>
+          </div>
       <div class="row" id="pokemon-view"></div>
       <!-- youtube videos go here -->
       <div class="row">
