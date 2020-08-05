@@ -1,17 +1,15 @@
-
-#myVideo{
+#myVideo {
   position: fixed;
   right: 0;
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
 }
-.row{
+.row {
   justify-content: center;
   align-content: center;
-
 }
-img{
+.pokedeximg {
   max-width: 500px;
   max-height: 100%;
   display: block;
@@ -20,19 +18,20 @@ img{
   height: 100px;
   width: 100px;
   border-radius: 50%;
+}
 
 p {
   font-size: 0.8125rem;
-
 }
 .card-body {
   position: relative;
-  background-image: repeating-linear-gradient(#FDFD96, #FFCC33);
+  background-image: repeating-linear-gradient(#fdfd96, #ffcc33);
   color: black;
 }
+
+
 .close {
   position: absolute;
-
   left: 0.625rem;
   top: -17.5rem;
 }

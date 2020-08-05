@@ -15,9 +15,7 @@ $(document).ready(function () {
       console.log("This is the pokemon: " + name, response);
       // create a row to add pokemon cards too
       var pokemonCol = $("<div>");
-
       pokemonCol.addClass("col-xs-3 m-2");
-
       // add the row to HTML
       $("#pokemon-view").prepend(pokemonCol);
       // create the whole div to append the different card classes too
@@ -34,7 +32,7 @@ $(document).ready(function () {
       // create the card body to hold the contents
       var pokemonBodyDiv = $("<div>");
       pokemonBodyDiv.addClass("card-body");
-      pokemonBodyDiv.attr("style", "height:16rem");
+      pokemonBodyDiv.attr("style", "height:19rem");
       pokemonDiv.append(pokemonBodyDiv);
       // create the title where we use the var name to show for each card
       var pokemonBodyTitle = $("<h4>");
