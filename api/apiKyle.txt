@@ -1,6 +1,1 @@
-twitter api key:  kQ4U4UGWNmRRXR6IgDsOSPezO
-twitter api key secret: GDCk9cZRd0KhBujfkICV6pJATV28G1i3nGJvAoXJgDfxVrXLZJ
-twitter bearer token: AAAAAAAAAAAAAAAAAAAAADMpGgEAAAAAWY%2FR%2FfI8DLO4Yw%2BmjepLzAAIVfo%3DQJv86b2ZEmUn5hLUTrUvX7vPRws7shhHeB2NULSlaXU0PhwAtJ
-
-
 google/youtube api key: AIzaSyCtd97Zes7khZYm2GCHcYAfDT5EgvmWqZk
