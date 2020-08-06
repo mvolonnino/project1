@@ -1,19 +1,16 @@
 $(document).ready(function () {
-  $("#find-pokemon").on("click", function (event) {
-    event.preventDefault();
+  // Global Variables
+  var cardCount = 0;
+  var MAX_CARDS = 6;
+  var cardToReplace = 0;
 
-    var name = $("#pokemon-input").val().trim().toLowerCase();
-    console.log("This is the name of pokemon: ", name);
-
-    var queryURL = "https://pokeapi.co/api/v2/pokemon/" + name;
-    console.log("this is queryURL", queryURL);
-
-    $.ajax({
-      url: queryURL,
-      method: "GET",
-    }).then(function (response) {
-      console.log("This is the pokemon: " + name, response);
-      // create a row to add pokemon cards too
+  // array of searched names to create pokemon cards to try and only allow 6 cards to show on the page
+  var pokemonCardArray = [];
+  // create the pokemon cards each time the pokeball is clicked
+  function renderPokemonCards() {
+    $("#pokemon-view").empty();
+    for (var i = 0; i < pokemonCardArray.length; i++) {
+      var response = pokemonCardArray[i];
       var pokemonCol = $("<div>");
       pokemonCol.addClass("col-xs-3 m-2");
       // add the row to HTML
@@ -148,10 +145,51 @@ $(document).ready(function () {
       pokemonBodyDiv.append(clearBTN);
       // Append everything to the row we created that has been added to HTML
       pokemonCol.append(pokemonDiv);
-    });
+    }
+  }
+
+  $("#find-pokemon").on("click", function (event) {
+    event.preventDefault();
+    console.log("======================");
+    // name of the pokemon that will be searched in search field
+    var name = $("#pokemon-input").val().trim().toLowerCase();
+    console.log("This is the name of pokemon: ", name);
+
+    var queryURL = "https://pokeapi.co/api/v2/pokemon/" + name;
+    console.log("this is queryURL", queryURL);
+
+    console.log("This is the number for cardCount: ", cardCount);
+
+    $.ajax({
+      url: queryURL,
+      method: "GET",
+    })
+      .then(function (response) {
+        console.log("This is the pokemon: " + name, response);
+        cardCount++;
+        console.log("This is the number for cardCount: ", cardCount);
+        if (cardCount > MAX_CARDS) {
+          if (cardToReplace >= MAX_CARDS) {
+            cardToReplace = 0;
+          }
+          pokemonCardArray.splice(cardToReplace, 1, response);
+          console.log("pokemonCardArry length: ", pokemonCardArray.length);
+          renderPokemonCards();
+          cardToReplace++;
+          return;
+        } else if (cardCount <= MAX_CARDS) {
+          console.log("This is cardCount: ", cardCount);
+          pokemonCardArray.push(response);
+          console.log("This is our pokemonCardArray: ", response);
+          renderPokemonCards();
+        }
+      })
+      .catch(function (error) {
+        console.log("Spelled the Pokemon name wrong, cmon now: ", error);
+      });
 
     // logic for Youtube API to show a related video on pokemon searched
-    var youtubeKey = "AIzaSyAAjv4XhySAJQNWxgqskqqk9bBRj6DEXj4";
+    var youtubeKey = "AIzaSyAAfbghaqhBwtZd5wcSpoCWCfV-UbltQEg";
     var ytQueryURL = "https://www.googleapis.com/youtube/v3/search";
     var youtubeVideos = [];
     // searching by value that was entered in search field
