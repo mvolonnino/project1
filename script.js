@@ -165,6 +165,7 @@ $(document).ready(function () {
       method: "GET",
     })
       .then(function (response) {
+        // logic to only allow 6 cards to be displayed on page at once
         console.log("This is the pokemon: " + name, response);
         cardCount++;
         console.log("This is the number for cardCount: ", cardCount);
