@@ -4,6 +4,7 @@
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
+  z-index: 0;
 }
 .row {
   justify-content: center;
@@ -41,7 +42,6 @@
 .card-body {
   position: relative;
   background-image: repeating-linear-gradient(#fdfd96, #ffcc33);
-  color: black;
 }
 
 .close {
@@ -51,54 +51,7 @@
 }
 
 .youtube-vids {
-  z-index: 0;
-}
-
-/* #youtubeVideoRow {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-} */
-
-.pokedeximg {
-  max-width: 500px;
-  max-height: 100%;
-  display: block;
-}
-
-#pokemon-input {
-  -webkit-font-smoothing: antialiased;
-  margin-top: 0;
-  padding: 5px;
-  padding-left: 26px;
-  float: none;
-  width: 60%;
-  height: 40px;
-  font-size: 15px;
-  line-height: normal;
-  border-color: red;
-}
-#find-pokemon {
-  height: 75px;
-  width: 75px;
-  border-radius: 50%;
-}
-
-.card-body {
-  position: relative;
-  background-image: repeating-linear-gradient(#fdfd96, #ffcc33);
-  color: black;
-}
-.card-text {
-  font-size: 0.8125rem;
-}
-.close {
-  position: absolute;
-  right: 0.625rem;
-  top: -17.5rem;
-}
-.youtube-vids {
-  z-index: 0;
+  z-index: 10;
 }
 
 .z {
