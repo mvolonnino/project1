@@ -192,13 +192,13 @@ $(document).ready(function () {
         console.log("Spelled the Pokemon name wrong, cmon now: ", error);
         // changes the text color to red if error and displays this message underneath pokeball
         $("#errorText").text(
-          "Error: pokedex does not include Sword & Shield - check spelling"
+          "*Roadblock* : Pokedex does not include Sword & Shield - check spelling or re-enter a '#' 649 or lower"
         );
         $("#errorText").attr("style", "color:red");
       });
 
     // logic for Youtube API to show a related video on pokemon searched
-    var youtubeKey = "AIzaSyAAjv4XhySAJQNWxgqskqqk9bBRj6DEXj4";
+    var youtubeKey = "AIzaSyCtd97Zes7khZYm2GCHcYAfDT5EgvmWqZk";
     var ytQueryURL = "https://www.googleapis.com/youtube/v3/search";
     var youtubeVideos = [];
     // searching by value that was entered in search field
@@ -217,37 +217,43 @@ $(document).ready(function () {
         videoEmbeddable: true,
         videoSyndiacted: true,
       },
-    }).then(function (response) {
-      // clg the related youtube search
-      console.log(response);
-      $(".youtube-player").attr(
-        "src",
-        "https://youtube.com/embed/" + response.items[0].id.videoId
-      );
-      // create function to render youtube videos based on the youtube videos array that will be emptied after each search so that only the most recent pokemon name will search youtube
-      function renderYoutubeVideos() {
-        $("#youtubeVideoRow").empty();
-        // creating the
-        for (var i = 0; i < youtubeVideos.length; i++) {
-          var youtubeCol = $("<div>");
-          youtubeCol.addClass("col-md-6");
-          $("#youtubeVideoRow").append(youtubeCol);
-          // create the iframe to hold the youtube video
-          var youtubeIframe = $("<iframe>");
-          youtubeIframe.addClass("youtube-player youtube-vids mb-3");
-          youtubeIframe.attr("type", "text/html");
-          youtubeIframe.attr("width", "640");
-          youtubeIframe.attr("height", "385");
-          youtubeIframe.attr(
-            "src",
-            "https://youtube.com/embed/" + response.items[0].id.videoId
-          );
-          youtubeCol.append(youtubeIframe);
+    })
+      .then(function (response) {
+        // clg the related youtube search
+        console.log(response);
+        $(".youtube-player").attr(
+          "src",
+          "https://youtube.com/embed/" + response.items[0].id.videoId
+        );
+        // create function to render youtube videos based on the youtube videos array that will be emptied after each search so that only the most recent pokemon name will search youtube
+        function renderYoutubeVideos() {
+          $("#youtubeVideoRow").empty();
+          // creating the
+          for (var i = 0; i < youtubeVideos.length; i++) {
+            var youtubeCol = $("<div>");
+            youtubeCol.addClass("col-md-6");
+            $("#youtubeVideoRow").append(youtubeCol);
+            // create the iframe to hold the youtube video
+            var youtubeIframe = $("<iframe>");
+            youtubeIframe.addClass("youtube-player youtube-vids mb-3");
+            youtubeIframe.attr("type", "text/html");
+            youtubeIframe.attr("width", "640");
+            youtubeIframe.attr("height", "385");
+            youtubeIframe.attr(
+              "src",
+              "https://youtube.com/embed/" + response.items[0].id.videoId
+            );
+            youtubeCol.append(youtubeIframe);
+          }
         }
-      }
-      // call the renderYoutubeVideos to only show the last searched name
-      renderYoutubeVideos();
-    });
+        // call the renderYoutubeVideos to only show the last searched name
+        renderYoutubeVideos();
+      })
+      .catch(function (error) {
+        console.log("This is our error: ", error);
+        $("#youtubeErrorText").text("API Key exhausted - update");
+        $("#youtubeErrorText").attr("style", "color:red");
+      });
   });
   // function on click to remove the card when "x" is clicked
   $(document).on("click", "#closer", function () {
