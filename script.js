@@ -142,6 +142,7 @@ $(document).ready(function () {
       clearBTN.addClass("close fa fa-window-close float-right");
       clearBTN.attr("type", "button");
       clearBTN.attr("id", "closer");
+      clearBTN.attr("data-value", i);
       pokemonBodyDiv.append(clearBTN);
       // Append everything to the row we created that has been added to HTML
       pokemonCol.append(pokemonDiv);
@@ -151,6 +152,8 @@ $(document).ready(function () {
   $("#find-pokemon").on("click", function (event) {
     event.preventDefault();
     console.log("======================");
+    // to change the color of the search field back to black
+    $("#errorText").hide();
     // name of the pokemon that will be searched in search field
     var name = $("#pokemon-input").val().trim().toLowerCase();
     console.log("This is the name of pokemon: ", name);
@@ -187,10 +190,15 @@ $(document).ready(function () {
       })
       .catch(function (error) {
         console.log("Spelled the Pokemon name wrong, cmon now: ", error);
+        // changes the text color to red if error and displays this message underneath pokeball
+        $("#errorText").text(
+          "Error: pokedex does not include Sword & Shield - check spelling"
+        );
+        $("#errorText").attr("style", "color:red");
       });
 
     // logic for Youtube API to show a related video on pokemon searched
-    var youtubeKey = "AIzaSyAAfbghaqhBwtZd5wcSpoCWCfV-UbltQEg";
+    var youtubeKey = "AIzaSyAAjv4XhySAJQNWxgqskqqk9bBRj6DEXj4";
     var ytQueryURL = "https://www.googleapis.com/youtube/v3/search";
     var youtubeVideos = [];
     // searching by value that was entered in search field
@@ -244,6 +252,10 @@ $(document).ready(function () {
   // function on click to remove the card when "x" is clicked
   $(document).on("click", "#closer", function () {
     event.preventDefault();
-    $(this).parent().parent().parent().hide();
+    var dataValue = $(this).attr("data-value");
+    console.log("this is the dataValue: ", dataValue);
+    pokemonCardArray.splice(dataValue, 1);
+    cardCount--;
+    renderPokemonCards();
   });
 });
